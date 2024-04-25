@@ -33,9 +33,26 @@ pokemonForm.addEventListener("submit", async event => {
     //stops it from the default behavior of refreshing the page;
     event.preventDefault();
     
-    const pokeName = pokeInput.value; //store pokemon name
+    const pokeName = pokeInput.value.toLowerCase(); //store pokemon name
+    
 
-    if (pokeName) {
+    if (pokeName === "steve") {
+        
+        const theCard = document.querySelector(".innerCard");
+        theCard.innerHTML = ""
+        const nameDisplay = document.createElement("h1");
+        const picDisplay = document.createElement("img")
+        const magicDisplay = document.createElement("p")
+        nameDisplay.textContent = pokeName;
+        picDisplay.src = "steve.png";
+        magicDisplay.textContent = "Hobbies: Loves S'n some Ds. 🩷"
+        innerCard.appendChild(nameDisplay);
+        innerCard.appendChild(magicDisplay)
+        innerCard.appendChild(picDisplay);
+        
+
+    }
+    else if (pokeName) {
         try {
             const pokeData = await getPokeData(pokeName);
             displayPokeInfo(pokeData);            
@@ -143,11 +160,6 @@ function displayPokeInfo(data) {
 
 }
 
-function addItem(item) {
-    
-
-}
-
 function displayError(message) {
     
     //create a spot for the error message
@@ -160,3 +172,20 @@ function displayError(message) {
     innerCard.appendChild(errorDisplay);
 
 };
+
+function steveDetected() {
+    const nameDisplay = document.createElement("h1");
+    const moveDisplay = document.createElement("p");
+    const spriteDisplay = document.createElement("img");
+
+    nameDisplay.textContent = "Steve Boots";
+    // baseExpDisplay.textContent = baseExperience
+    spriteDisplay.src = "steve.png";
+    moveDisplay.textContent = `Special move: Rubbin' wieners`;
+
+    innerCard.appendChild(nameDisplay);
+    // innerCard.appendChild(baseExpDisplay);
+    //
+    innerCard.appendChild(moveDisplay);
+    innerCard.appendChild(spriteDisplay);
+}
