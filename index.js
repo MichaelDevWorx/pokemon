@@ -57,7 +57,7 @@ async function getPokeData(pokeName) {
     const response = await fetch(apiUrl);
 
     if (!response.ok){
-        throw new Error("Could not fetch weather data.");
+        throw new Error("Please check your spelling!");
         
     }
     
