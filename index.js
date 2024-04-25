@@ -1,6 +1,7 @@
 const pokemonForm = document.querySelector(".pokemonForm");
 const innerCard = document.querySelector(".innerCard");
 const pokeInput = document.querySelector(".pokeInput");
+const outerCard = document.querySelector(".outerCard")
 
 async function getPokemon() {
 
@@ -93,6 +94,8 @@ function displayPokeInfo(data) {
 
     innerCard.textContent = "";
     innerCard.style.display = "flex";
+    outerCard.textContent = "";
+    outerCard.style.display = "flex";
 
     const nameDisplay = document.createElement("h1");
     const moveDisplay = document.createElement("p");
