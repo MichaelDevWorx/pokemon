@@ -1,0 +1,77 @@
+body {
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonForm {
+    margin: 20px;
+    display: grid;
+    justify-content: center;
+    justify-self: center !important;
+    align-items: center;
+}
+
+.pokeInput {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid rgba(0, 0, 0, 0.402);
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+.pokeButton[type="submit"] {
+    padding: 10px 20px;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+    background-color: hsl(48, 100%, 51%);
+    color: #3c5aa6;
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.pokeButton[type="submit"]:hover{
+    background-color: hsl(48, 100%, 46%)
+
+}
+
+.pokeButton[type="submit"]:active{
+    background-color: #c7a1089c;
+
+}
+
+.randomButton[type="submit"] {
+    padding: 10px 20px;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: .2rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    background-color: #ffcb05;
+    color: #3c5aa6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+
+.randomButton[type="submit"]:hover{
+    background-color: hsl(48, 100%, 46%)
+
+}
+
+.randomButton[type="submit"]:active{
+    background-color: #c7a1089c;
+
+}
+
+.card {
+    
+}
