@@ -3,6 +3,30 @@ const innerCard = document.querySelector(".innerCard");
 const pokeInput = document.querySelector(".pokeInput");
 const outerCard = document.querySelector(".outerCard")
 const randomForm = document.querySelector(".randomForm")
+const body = document.body;
+
+body.onload = loadRandomPoke();
+
+async function loadRandomPoke() {
+
+    let randomPokeNum = (Math.floor(Math.random() * 1025));
+    randomPokeNum = randomPokeNum.toString();
+   
+    if (randomPokeNum) {
+        try {
+            const pokeData = await getPokeData(randomPokeNum);
+            displayPokeInfo(pokeData);            
+        }
+        catch(error){
+            console.error(error);
+            displayError(error);
+        }
+    }
+    else {
+        displayError("Enter a Pokemon name!")
+    }
+
+};
 
 pokemonForm.addEventListener("submit", async event => {
 
