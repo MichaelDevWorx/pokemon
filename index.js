@@ -6,7 +6,7 @@ const outerCard = document.querySelector(".outerCard")
 async function getPokemon() {
 
     //stops it from the default behavior of refreshing the page;
-    event.preventDefault(); 
+    preventDefault(); 
     
     const pokeName = pokeInput.value; //store pokemon name
 
@@ -28,7 +28,7 @@ async function getPokemon() {
 
 async function getRandom() {
 
-    event.preventDefault();
+    preventDefault();
 
     let randomPokeNum = (Math.floor(Math.random() * 1025));
     randomPokeNum = randomPokeNum.toString();
@@ -94,8 +94,7 @@ function displayPokeInfo(data) {
 
     innerCard.textContent = "";
     innerCard.style.display = "flex";
-    outerCard.textContent = "";
-    outerCard.style.display = "flex";
+ 
 
     const nameDisplay = document.createElement("h1");
     const moveDisplay = document.createElement("p");
